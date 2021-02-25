@@ -1,10 +1,98 @@
 
 body {
     //background-color: rgb(0, 0, 0);
-    background-image: url("../pics/lightbulb.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: 0;
-    font-family: 'Merriweather', serif;
-    color: rgb(233, 193, 108);
+    background: black;
+    font-family: 'Raleway', sans-serif;
+    color: #ebc472;
+    
 }
+
+h1 {
+
+    font-size: 8em;
+    color: rgb(2, 0, 0);
+    text-align: center;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ebc472, 0 0 20px #ebc472, 0 0 25px #ebc472, 0 0 30px #ebc472,0 0 35px #ebc472;
+
+  }
+
+  h2{
+    font-size: 3em;
+  }
+
+  h4{
+      font-size: 2.5em;
+  }
+
+#main-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "home"
+        "about"
+        "work"
+        "cont";
+}
+
+.section-header{
+    width: 100%;
+    text-align: left;
+    vertical-align: top;
+    padding-left: 1vw;
+}
+
+#home-section{
+    grid-area: home;
+    background-image: url("../pics/lightbulb.jpg");
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: black;
+    position: relative;
+    height: 100vh;
+    
+}
+
+#about-section{
+    grid-area: about;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+#work-section{
+    grid-area: work;
+    display: flex;
+    height: 100vh;
+}
+
+#contact-section{
+    grid-area: cont;
+    display: flex;
+    height: 100vh;
+}
+
+#footer{
+    display: flex;
+    justify-content: center;
+}
+
+#nav-items{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2.5vh;
+    list-style-type: none;
+}
+
+#nav-items li{
+    margin-right: 2em;
+}
+
+
+
+
