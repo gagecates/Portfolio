@@ -3,6 +3,8 @@ body {
     background: black;
     font-family: 'Raleway', sans-serif;
     color: #ebc472;
+    margin: 0;
+    padding: 0;
     
 }
 
@@ -21,6 +23,7 @@ h1 {
 
   h4{
       font-size: 2.5em;
+      color: #ffffff
   }
 
 #main-container{
@@ -51,6 +54,7 @@ h1 {
     background-color: black;
     position: relative;
     height: 100vh;
+    border: 1px solid green;
     
 }
 
@@ -68,28 +72,33 @@ h1 {
     grid-area: work;
     display: flex;
     height: 100vh;
+    border-top: .1em solid #ebc472;
 }
 
 #contact-section{
     grid-area: cont;
     display: flex;
     height: 100vh;
+    border-top: .1em solid #ebc472;
 }
 
 #footer{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+
 }
 
 #nav-items{
     display: flex;
     justify-content: flex-end;
-    font-size: 2.5vh;
+    font-size: 2vh;
     list-style-type: none;
 }
 
 #nav-items li{
-    margin-right: 2em;
+    margin-right: 1.5em;
 }
 
 
