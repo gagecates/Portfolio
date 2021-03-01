@@ -100,6 +100,10 @@ section{
 
 #skills-section{
     grid-area: work;
+    background-image: url("../pics/lightbulb.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 #contact-section{
@@ -141,8 +145,9 @@ section{
 }
 
 .education-icon{
-    height: 40%;
-    width: 75%;
+    height: 7em;
+    width: 15em;
+    padding: 0;
 }
 
 #study{
@@ -156,13 +161,10 @@ section{
     width: 20vw;
     color: #000;
     border-radius: 20px;
-    background-color: #ebc472
+    background-color: hsla(0, 27%, 82%);
+    opacity: 0.9;
 }
 
 .underline{
     text-decoration: underline;
 }
-
-
-
-
