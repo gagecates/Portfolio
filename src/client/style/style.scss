@@ -1,8 +1,9 @@
+$yellowLight: #ebc472;
 
 body {
-    background: black;
+    background:rgb(2, 0, 0);
     font-family: 'Raleway', sans-serif;
-    color: #ebc472;
+    color: $yellowLight;
     margin: 0;
     padding: 0;
     
@@ -13,7 +14,7 @@ h1 {
     font-size: 7em;
     color: rgb(2, 0, 0);
     text-align: center;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ebc472, 0 0 20px #ebc472, 0 0 25px #ebc472, 0 0 30px #ebc472,0 0 35px #ebc472;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px $yellowLight, 0 0 20px $yellowLight, 0 0 25px $yellowLight, 0 0 30px $yellowLight,0 0 35px $yellowLight;
 
   }
 
@@ -48,6 +49,14 @@ h1 {
         "work"
         "skills"
         "cont";
+    margin: 0;
+    padding: 0;
+}
+
+// gradient light effect for whole page starting after home
+#light-effect{
+    background:rgb(2, 0, 0);
+    background: linear-gradient(180deg, #e6c57d 0%, #020100 80%);
 }
 
 #projects-container{
@@ -57,24 +66,24 @@ h1 {
     justify-content: center;
 }
 
+section{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    border-top-width: 20vw;
+}
+
 .section-header{
-    width: 100%;
+    width: 20%;
     text-align: left;
     vertical-align: top;
     margin-top: 1vh;
     margin-bottom: 0;
     padding-left: 2vw;
     
-}
-
-section{
-    display: flex;
-    height: 100vh;
-    border-top: .1em solid #ebc472;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
 }
 
 #home-section{
@@ -84,6 +93,7 @@ section{
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-color: black;
+    background-blend-mode: exclusion;
     position: relative;
     border-top: none;
     
@@ -91,38 +101,76 @@ section{
 
 #about-section{
     grid-area: about;
+    h2, h4{
+        color:rgb(2, 0, 0);
+    }
+    h2{
+        margin-right: auto;
+    }
+    color:rgb(2, 0, 0);
 }
 
 #work-section{
     grid-area: work;
-    
+
+    h2, h4{
+        color:rgb(2, 0, 0);
+    }
+    h2{
+        border-top: .1em solid rgb(2, 0, 0);
+        margin-left: auto;
+        text-align: right;
+        padding-right: 1vw;
+    }
 }
 
 #skills-section{
     grid-area: work;
-    background-image: url("../pics/lightbulb.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    h2, h4{
+        color:$yellowLight;
+    }
+    h2{
+        border-top: .1em solid $yellowLight;
+        margin-right: auto;
+        text-align: left;
+        padding-left: 1vw;
+    }
 }
 
 #contact-section{
     grid-area: cont;
+    h2, h4{
+        color:$yellowLight;
+    }
+    h2{
+        border-top: .1em solid $yellowLight;
+        margin-left: auto;
+        text-align: right;
+        padding-right: 1vw;
+    }
 }
 
-#footer{
-    margin: 2vh;
+#navbar{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    z-index: 1;
 }
 
 #nav-items{
     display: flex;
     justify-content: flex-end;
-    font-size: 3vh;
+    font-size: 2.5vh;
     list-style-type: none;
+    margin: .8vh;
+    
 }
 
 #nav-items li{
-    margin-right: 1.5em;
+    margin-right: 1em;
+    padding: 0;
 }
 
 .project-image{
@@ -161,7 +209,7 @@ section{
     width: 20vw;
     color: #000;
     border-radius: 20px;
-    background-color: hsla(0, 27%, 82%);
+    background-color: rgb(197, 177, 177);
     opacity: 0.9;
 }
 
