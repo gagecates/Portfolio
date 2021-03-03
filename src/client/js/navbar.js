@@ -1,42 +1,51 @@
-const navBar = document.getElementById('navbar');
+const navItemsUL = document.getElementById('nav-items');
 const sections = document.querySelectorAll("section");
+const sectionsViewBox = document.querySelectorAll('div.section-in-viewport')
 
 
-for ()
-navLink.addEventListener('click',function(){
-    section.scrollIntoView({behavior: "smooth"})
+function createNavLinks(){
+    for (let section of sections){
+        let navLink = document.createElement("li");
+        navLink.id = section.id + "-nav";
+        navLink.innerText = section.getAttribute('data-nav');
+        navLink.addEventListener('click',function(){
+            section.scrollIntoView({behavior: "smooth"})
+
+        });
+
+        navItemsUL.appendChild(navLink);
+    }
+};
 
 
 // checks if section is in viewport
-function inViewPort(section){
-    const bounding = section.getBoundingClientRect();
+function inViewPort(sectionBox){
+    const bounding = sectionBox.getBoundingClientRect();
     return (
         bounding.top >= 0 &&
         bounding.left >= 0 &&
         bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
+    )
+};
 
 
-// sets section and corisponding nav bar link to active when in viewport
+// sets navlink to active when centered section box element is in viewport
 function setActive(){
-    for (let section of sections){
-        const navLink = document.getElementById(section.id + "-nav");
-        if(inViewPort(section)){
-            section.classList.add('this-section-active');
+    for (let box of sectionsViewBox){
+        const className = box.id.split('-');
+        const navLink = document.getElementById(className[0] + "-" + className[1] + "-nav");
+        if(inViewPort(box)){
             navLink.classList.add('nav-active');
         }else {
-            section.classList.remove('this-section-active');
             navLink.classList.remove('nav-active');
         
         }
     }
 
-}
+};
+
+
+export { setActive, inViewPort, createNavLinks }
     
 
-// every scroll checks what section is in viewport
-document.addEventListener('scroll', function(){
-    setActive();
-});

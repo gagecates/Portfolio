@@ -19,7 +19,7 @@ h1 {
   }
 
   h2{
-    font-size: 3em;
+    font-size: 2.5em;
   }
 
   h3{
@@ -27,7 +27,7 @@ h1 {
   }
 
   h4{
-      font-size: 2em;
+      font-size: 1.6em;
       color: #ffffff;
   }
 
@@ -56,24 +56,28 @@ h1 {
 // gradient light effect for whole page starting after home
 #light-effect{
     background:rgb(2, 0, 0);
-    background: linear-gradient(180deg, #e6c57d 0%, #020100 80%);
-}
-
-#projects-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    background: linear-gradient(180deg, #e4c98e 0%, #020100 60%);
 }
 
 section{
     display: flex;
+    position: relative;
     height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
     border-top-width: 20vw;
+    padding-top: 3vh;
+}
+
+// box element centered in middle of sections used to determine section in view
+.section-in-viewport{
+    position: absolute;
+    height: 10vh;
+    width: 10vw;
+    left: 45vw;
+    top: 45vh;
 }
 
 .section-header{
@@ -84,6 +88,14 @@ section{
     margin-bottom: 0;
     padding-left: 2vw;
     
+}
+
+.section-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid green;
+    height: 90%;
 }
 
 #home-section{
@@ -105,7 +117,11 @@ section{
         color:rgb(2, 0, 0);
     }
     h2{
-        margin-right: auto;
+        position: absolute;
+        left: .01em;
+        top: .01em;
+        margin-top: 0;
+        padding-left: .3em;
     }
     color:rgb(2, 0, 0);
 }
@@ -117,7 +133,7 @@ section{
         color:rgb(2, 0, 0);
     }
     h2{
-        border-top: .1em solid rgb(2, 0, 0);
+        border-top: .05em solid rgb(2, 0, 0);
         margin-left: auto;
         text-align: right;
         padding-right: 1vw;
@@ -130,7 +146,7 @@ section{
         color:$yellowLight;
     }
     h2{
-        border-top: .1em solid $yellowLight;
+        border-top: .05em solid $yellowLight;
         margin-right: auto;
         text-align: left;
         padding-left: 1vw;
@@ -143,7 +159,7 @@ section{
         color:$yellowLight;
     }
     h2{
-        border-top: .1em solid $yellowLight;
+        border-top: .05em solid $yellowLight;
         margin-left: auto;
         text-align: right;
         padding-right: 1vw;
@@ -173,6 +189,10 @@ section{
     padding: 0;
 }
 
+.nav-active{
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px $yellowLight, 0 0 20px $yellowLight, 0 0 25px $yellowLight;
+}
+
 .project-image{
     height: 15em;
     width: 15em;
@@ -198,18 +218,21 @@ section{
     padding: 0;
 }
 
-#study{
+#projects-container{
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
-    width: 90%;
-    height: 30%;
+    width: 90vw;
+
 }
 
 .course{
     width: 20vw;
     color: #000;
     border-radius: 20px;
-    background-color: rgb(197, 177, 177);
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255,255,255,.1), rgba(231, 218, 34, 0.966));
     opacity: 0.9;
 }
 
