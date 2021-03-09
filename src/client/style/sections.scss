@@ -1,0 +1,105 @@
+$yellowLight: rgb(235, 196, 114);
+
+section{
+    display: flex;
+    height: 100vh;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    //border-top-width: 20vw;
+    padding-top: 3vh;
+    scroll-behavior: smooth;
+}
+
+// box element centered in middle of sections used to determine section in view
+.section-in-viewport{
+    position: absolute;
+    height: 10vh;
+    width: 10vw;
+    left: 40%;
+    top: 40%;
+}
+
+.section-header{
+    width: 20%;
+    text-align: left;
+    vertical-align: top;
+    margin-top: 1vh;
+    margin-bottom: 0;
+    padding-left: 2vw;
+}
+
+.section-container{
+    font-size: 13pt;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid green;
+    width: 90%;
+    height: 90%;
+}
+
+#home-section{
+    background-image: url("../pics/lightbulb.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: black;
+    background-blend-mode: exclusion;
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    border-top: none;
+    
+}
+
+#about-section{
+    h2{
+        width: 100%;
+        border-top: .05em solid rgb(2, 0, 0);
+        margin-right: auto;
+        text-align: left;
+        padding-left: 1vw;
+        
+    }
+    color:rgb(2, 0, 0);
+}
+
+#work-section{
+    h2{
+        width: 100%;
+        border-top: .05em solid black;
+        margin-left: auto;
+        text-align: right;
+        padding-right: 1vw;
+    }
+    color: black;
+}
+
+#skills-section{
+    h2{
+        width: 100%;
+        border-top: .05em solid $yellowLight;
+        margin-right: auto;
+        text-align: left;
+        padding-left: 1vw;
+    }
+    h4{
+        padding-bottom: 1vh;
+    }
+    color:$yellowLight;
+}
+
+#contact-section{
+    h2{
+        width: 100%;
+        border-top: .05em solid $yellowLight;
+        margin-left: auto;
+        text-align: right;
+        padding-right: 1vw;
+    }
+    color:$yellowLight;
+}

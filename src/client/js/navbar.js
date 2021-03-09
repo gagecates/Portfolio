@@ -1,3 +1,5 @@
+import { sectionAnimations, disableAnimations } from './sectionAnimations'
+
 const navItemsUL = document.getElementById('nav-items');
 const sections = document.querySelectorAll("section");
 const sectionsViewBox = document.querySelectorAll('div.section-in-viewport')
@@ -19,8 +21,8 @@ function createNavLinks(){
 
 
 // checks if section is in viewport
-function inViewPort(sectionBox){
-    const bounding = sectionBox.getBoundingClientRect();
+function inViewPort(element){
+    const bounding = element.getBoundingClientRect();
     return (
         bounding.top >= 0 &&
         bounding.left >= 0 &&
@@ -34,11 +36,15 @@ function inViewPort(sectionBox){
 function setActive(){
     for (let box of sectionsViewBox){
         const className = box.id.split('-');
-        const navLink = document.getElementById(className[0] + "-" + className[1] + "-nav");
+        const section = document.getElementById(className[0] + "-" + className[1])
+        const navLink = document.getElementById(section.id + "-nav");
+        
         if(inViewPort(box)){
             navLink.classList.add('nav-active');
+            sectionAnimations(section);
         }else {
             navLink.classList.remove('nav-active');
+            disableAnimations(section);
         
         }
     }
@@ -46,6 +52,10 @@ function setActive(){
 };
 
 
-export { setActive, inViewPort, createNavLinks }
+export { 
+    setActive, 
+    inViewPort, 
+    createNavLinks,
+}
     
 

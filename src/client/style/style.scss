@@ -1,7 +1,13 @@
-$yellowLight: #ebc472;
+$yellowLight: rgb(235, 196, 114);
+
+html {
+    scroll-behavior: smooth;
+  }
 
 body {
     background:rgb(2, 0, 0);
+    background:rgb(2, 0, 0);
+    background: linear-gradient(180deg, #e4c98e 20%, #020100 65%);
     font-family: 'Raleway', sans-serif;
     color: $yellowLight;
     margin: 0;
@@ -10,166 +16,52 @@ body {
 }
 
 h1 {
-
     font-size: 7em;
     color: rgb(2, 0, 0);
     text-align: center;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px $yellowLight, 0 0 20px $yellowLight, 0 0 25px $yellowLight, 0 0 30px $yellowLight,0 0 35px $yellowLight;
-
   }
 
-  h2{
-    font-size: 2.5em;
+h2{
+    //font-size: 2.5em;
   }
 
-  h3{
-      color: #ffffff;
+h4{
+    //font-size: 1.6em;
   }
 
-  h4{
-      font-size: 1.6em;
-      color: #ffffff;
-  }
+p{
+    //font-size: 1.2em;
+}
 
-  p{
-      font-size: 1.2em;
-  }
+#contact-jump{
+    transition-property: opacity;
+    text-shadow: 2px 2px $yellowLight;
+}
 
-  .page-jump{
-      font-size: 1.3em;
-  }
+#contact-jump:hover{
+    color: white;
+}
 
 #main-container{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 1fr);
-    grid-template-areas:
-        "home"
-        "about"
-        "work"
-        "skills"
-        "cont";
-    margin: 0;
-    padding: 0;
+    max-width: 1300px;
+    margin: auto;
 }
 
-// gradient light effect for whole page starting after home
-#light-effect{
-    background:rgb(2, 0, 0);
-    background: linear-gradient(180deg, #e4c98e 0%, #020100 60%);
+#bread-n-butter{
+    height: 40%
 }
 
-section{
+#intro-container{
     display: flex;
-    position: relative;
-    height: 100vh;
-    flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    border-top-width: 20vw;
-    padding-top: 3vh;
-}
-
-// box element centered in middle of sections used to determine section in view
-.section-in-viewport{
-    position: absolute;
-    height: 10vh;
-    width: 10vw;
-    left: 45vw;
-    top: 45vh;
-}
-
-.section-header{
-    width: 20%;
-    text-align: left;
-    vertical-align: top;
-    margin-top: 1vh;
-    margin-bottom: 0;
-    padding-left: 2vw;
-    
-}
-
-.section-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 2px solid green;
-    height: 90%;
-}
-
-#home-section{
-    grid-area: home;
-    background-image: url("../pics/lightbulb.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-color: black;
-    background-blend-mode: exclusion;
-    position: relative;
-    border-top: none;
-    
-}
-
-#about-section{
-    grid-area: about;
-    h2, h4{
-        color:rgb(2, 0, 0);
-    }
-    h2{
-        position: absolute;
-        left: .01em;
-        top: .01em;
-        margin-top: 0;
-        padding-left: .3em;
-    }
-    color:rgb(2, 0, 0);
-}
-
-#work-section{
-    grid-area: work;
-
-    h2, h4{
-        color:rgb(2, 0, 0);
-    }
-    h2{
-        border-top: .05em solid rgb(2, 0, 0);
-        margin-left: auto;
-        text-align: right;
-        padding-right: 1vw;
-    }
-}
-
-#skills-section{
-    grid-area: work;
-    h2, h4{
-        color:$yellowLight;
-    }
-    h2{
-        border-top: .05em solid $yellowLight;
-        margin-right: auto;
-        text-align: left;
-        padding-left: 1vw;
-    }
-}
-
-#contact-section{
-    grid-area: cont;
-    h2, h4{
-        color:$yellowLight;
-    }
-    h2{
-        border-top: .05em solid $yellowLight;
-        margin-left: auto;
-        text-align: right;
-        padding-right: 1vw;
-    }
+    height: 40%;
 }
 
 #navbar{
     display: flex;
-    justify-content: flex-end;
-    width: 100%;
+    justify-content: center;
+    width: 100vw;
     background-color: black;
     position: fixed;
     z-index: 1;
@@ -181,7 +73,6 @@ section{
     font-size: 2.5vh;
     list-style-type: none;
     margin: .8vh;
-    
 }
 
 #nav-items li{
@@ -196,46 +87,50 @@ section{
 .project-image{
     height: 15em;
     width: 15em;
-    margin: 1vw;
-    padding: 0;
 }
 
-#skills-icons{
-    width: 50vw;
-    margin-bottom: 3vh;
+#shake-pic{
+    width: 70%;
+    height: 70%;
+    border-radius: 20px;
+    margin-top: 3vh;
 }
 
-.skills-icon{
-    height: 4em;
-    width: 4em;
-    margin: 1vw;
-    padding: 0;
-}
-
-.education-icon{
-    height: 7em;
-    width: 15em;
-    padding: 0;
-}
+ #shake-pic:hover{
+    transform: scaleX(-1);
+ }
 
 #projects-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+}
+
+#programs-container{
+    display: flex; 
     justify-content: space-around;
-    width: 90vw;
-
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    border: 2px solid blue;
+    margin-right: auto;
+    text-align: left;
 }
 
-.course{
+#certificate{
+    margin-left: auto;
+    height: 20vh;
     width: 20vw;
-    color: #000;
-    border-radius: 20px;
-    background: white;
-    background: linear-gradient(to right bottom, rgba(255,255,255,.1), rgba(231, 218, 34, 0.966));
-    opacity: 0.9;
 }
-
 .underline{
     text-decoration: underline;
+}
+
+#education-header{
+    border-bottom: 2px solid rgb(30, 144, 189);
+    width: 20%;
+    color: rgb(30, 144, 189);
 }

@@ -1,3 +1,7 @@
 1. about section and maybe all, when scroll into view then gradually show content? from the dark...
 
-2. 
+2. When projects come into viewport, then do slides to other pic one after another like a wave effect.. have two or the pics 
+
+3. scroll effect on bread and butter icons... hover effect stops scroll and displays title of icon...
+
+4. Why work header is wider then moves in when in view?
