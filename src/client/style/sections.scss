@@ -11,6 +11,7 @@ section{
     //border-top-width: 20vw;
     padding-top: 3vh;
     scroll-behavior: smooth;
+    //border: 2px solid blue;
 }
 
 // box element centered in middle of sections used to determine section in view
@@ -23,6 +24,7 @@ section{
 }
 
 .section-header{
+    font-size: 25pt;
     width: 20%;
     text-align: left;
     vertical-align: top;
@@ -33,13 +35,8 @@ section{
 
 .section-container{
     font-size: 13pt;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    border: 2px solid green;
     width: 90%;
-    height: 90%;
+    //border: 1px solid red;
 }
 
 #home-section{
@@ -82,6 +79,7 @@ section{
 #skills-section{
     h2{
         width: 100%;
+        overflow: suto;
         border-top: .05em solid $yellowLight;
         margin-right: auto;
         text-align: left;
@@ -91,6 +89,7 @@ section{
         padding-bottom: 1vh;
     }
     color:$yellowLight;
+    height: 200vh;
 }
 
 #contact-section{
@@ -102,4 +101,13 @@ section{
         padding-right: 1vw;
     }
     color:$yellowLight;
+    height: 90vh;
+}
+
+#contact-section-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
 }

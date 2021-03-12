@@ -8,9 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
   
-  <title>Gage Cates</title>
+  <title>Hello, I'm Gage Cates</title>
 </head>
 <body>
+  <!-- Navbar  -->
   <div id='navbar'>
     <ul id='nav-items'>
       <!-- dynamically add links in navbar.js-->
@@ -22,12 +23,14 @@
           <h1>Gage Cates</h1>
       </section>
 
+      <!-- About Section  -->
+
         <section id='about-section' data-nav='About'>
           <div id='about-section-viewbox' class='section-in-viewport'></div>
             <h2 id='about-header' class='section-header'>About</h2>
-              <div id='intro-container' class='section-container'>
+              <div class='section-container'>
                 <div class='magic-appear'>
-                  <h4>Me, Myself and I</h4>
+                  <div class='title'>Me, Myself and I</div>
                     <p class ='intro'>
                       Learning web development was definately my light bulb moment.<br>
                       I am an extremely inspired full stack developer
@@ -40,47 +43,80 @@
                     <div id= 'contact-jump' class='magic-appear' dest='contact'><h4>Let's create something great!</h4></div>
                   </a>
               </div>
-              <div class='section-container'>
-                <div id='shake-container' class='magic-appear'>
+              <div id='handshake' class='section-container'>
                   <img id='shake-pic' src="src/client/pics/sections/handshake.jpg"/>
-                </div>
               </div>
         </section>
+
+        <!-- Work Section  -->
 
         <section id='work-section' data-nav='Work'>
           <div id ='work-section-viewbox' class='section-in-viewport'></div>
           <h2 id='work-header'class='section-header'>Work</h2>
-            <div class='section-container'>
-              <h4>Projects</h4>
-              <div id='projects-container' class='magic-appear'>
-                <div id='project1'>
-                  <img class='project-image' src="src/client/pics/where-to/project-photo.jpg"></img>
-                </div>
+          <div class='title'>Projects</div>
+          <div id='all-projects-container' class='magic-appears slideshow'>
 
-                <div id='project2'>
-                  <img class='project-image' src="src/client/pics/article-eval/project-photo.jpg"></img>
+            <div class='project-pic-container' id='project1'>
+              <img class='project-image' src="src/client/pics/where-to/project-photo.jpg"/>
+              <div class='overlay'>
+                <div>
+                  <h3>Where To?</h3>
+                  <p class='overlay-stack'>JS / Node.js</p>
                 </div>
+                <div>
+                  <button class='overlay-button'>Learn More</button>
+                </div>
+              </div>
+            </div>
 
-                <div id='project3'>
-                  <img class='project-image' src="src/client/pics/blog-post/project-photo.jpg"></img>
+            <div class='project-pic-container' id='project2'>
+              <img class='project-image' src="src/client/pics/article-eval/project-photo.jpg"/>
+              <div class='overlay'>
+                <div>
+                  <h3>Break it Down</h3>
+                  <p class='overlay-stack'>JS / Node.js</p>
                 </div>
+                <div>
+                  <button class='overlay-button'>Learn More</button>
+                </div>
+              </div>
+            </div>
 
-                <div id='project4'>
-                  <img class='project-image' src="src/client/pics/fyyur/project-photo.jpg"></img>
+            <div class='project-pic-container' id='project3'>
+              <img class='project-image' src="src/client/pics/macros-yo/project-photo.jpg"/>
+              <div class='overlay'>
+                <div>
+                  <h3>Macros Yo</h3>
+                  <p class='overlay-stack'>Python / Flask</p>
                 </div>
+                <div>
+                  <button class='overlay-button'>Learn More</button>
+                </div>
+              </div>
+            </div>
 
-                <div id='project5'>
-                  <img class='project-image' src="src/client/pics/trivia/project-photo.jpg"></img>
+            <div class='project-pic-container' id='project4'>
+              <img class='project-image' src="src/client/pics/trivia/project-photo.jpg"/>
+              <div class='overlay'>
+                <div>
+                  <h3>Trivia</h3>
+                  <p class='overlay-stack'>React / Python / Flask</p>
                 </div>
+                <div>
+                  <button class='overlay-button'>Learn More</button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
+
+        <!-- Skills Section  -->
 
         <section id='skills-section' data-nav='Skills'>
           <div id ='skills-section-viewbox' class='section-in-viewport'></div>
           <h2 class='section-header'>Skills</h2>
             <div id='bread-n-butter' class='section-container'>
-              <h4>My bread and butter</h4>
+              <div class='title'>My bread and butter</div>
                 <div id='skills-icons-container' class='magic-appear'>
                   <img id='HTML' class='skills-icon' src="src/client/pics/skills/html.png"></img>
                   <img id='CSS' class='skills-icon' src="src/client/pics/skills/css.png"></img>
@@ -95,45 +131,104 @@
                   <img id='Flask' class='skills-icon' src="src/client/pics/skills/flask.png"></img>
                   <img id='Webpack' class='skills-icon' src="src/client/pics/skills/webpack.png"></img>
                 </div>
+                <div id='skill-explain-container'>
+                  <span id='skill-explain'></span>
+                </div>
             </div>
-              <div id='skill-explain-container' class='section-container'>
-                <span id='skill-explain'></span>
-              </div>
-            <div id='knowledge-container' class='section-container'>
-              <h4>Education / Cerification</h4>
-              <div id='programs-container' class='magic-appear'>
-                <div>
-                <h3 id='education-header'>Udacity</h3>
-                <h4 id='education-program'>Full Stack Nanodegree</h4>
-                  <div id='education-date' class='date'>October 2020 - January 2021</div>
-                    <p id='education-details'>Full stack web development program. Building fully functional deployed applications.</p>
+
+              <!-- Programs  -->
+              <div id='education-container' class='section-container'>
+                <div class='title'>Education / Cerification</div>
+                  <div class='program-container'>
+                    <div class='program-details'>
+                      <h3 class='udacity-header'>Udacity</h3>
+                      <h4 id='education-program'>Full Stack Nanodegree</h4>
+                      <div id='education-date' class='date'>October 2020 - January 2021</div>
+                      <p id='education-details'>Full stack web development program. Building fully functional database backed and deployed applications.</p>
+                        <ul>
+                          <li>Configure user authentication and access control for an application backend</li>
+                          <li>Design and build a database for an application</li>
+                          <li>Create and deploy a database-backed web API</li>
+                          <li>Deploy a Flask-based web application to the cloud using Docker and Kubernetes</li>
+                        </ul>
+                        <p id='stack'>[PostgreSQL, SQLAlchemy, Python, Flask, JWT, AWS, Auth0] </p>
+                    </div>
+                    <div class='cert-container'>
+                      <img id='certificate' src="src/client/pics/certs/fullstack.png"></img>
+                    </div>
+                  </div>
+
+                <div class='program-container'>
+                  <div class='program-details'>
+                    <h3 class='udacity-header'>Udacity</h3>
+                    <h4 id='education-program'>Front End Nanodegree</h4>
+                    <div id='education-date' class='date'>November 2020 - Feburary 2021</div>
+                    <p id='education-details'>Front end web development program. Learned the fundementals of front end applications. Webpack built responsive front end with a Node.js backend.</p>
                       <ul>
-                        <li>Configure user authentication and access control for an application backend</li>
-                        <li>Design and build a database for an application</li>
-                        <li>Create and deploy a database-backed web API</li>
-                        <li>Deploy a Flask-based web application to the cloud using Docker and Kubernetes</li>
+                        <li>Construct responsive websites using CSS, Flexbox and CSS Grid</li>
+                        <li>Develop interactive websites and UI applications using JavaScript and HTML</li>
+                        <li>Connect applications to backend server using JavaScript and Node.js</li>
+                        <li>Integrate application build and deployment using Webpack and Service Workers</li>
+                        <li>Application testing with Jest</li>
                       </ul>
-                      <p id='stack'>[PostgreSQL, SQLAlchemy, Python, Flask, JWT, AWS, Auth0] </p>
+                    <p id='stack'>[HTML, CSS, Sass, Javascript, Node.js, Webpack, Service Workers, Jest] </p>
+                  </div>
+                  <div class='cert-container'>
+                    <img id='certificate' src="src/client/pics/certs/frontend.png"></img>
+                  </div>
                 </div>
-                <div>
-                  <img id='certificate' src="src/client/pics/certs/fullstack.png"></img>
+
+                <div class='program-container'>
+                  <div class='program-details'>
+                    <h3 class='udemy-header'>Udemy</h3>
+                    <h4 id='education-program'>Modern React with Redux</h4>
+                    <div id='education-date' class='date'>January 2021 - March 2021</div>
+                    <p id='education-details'>Modern React/Redux program. Learned the ins and outs of building Redux applications. Fully functional React apps built.</p>
+                      <ul>
+                        <li>Learn the fundamental features of React, including JSX, state, and props</li>
+                        <li>Understanding the lifesycle methods</li>
+                        <li>React API requests using Ajax</li>
+                      </ul>
+                    <p id='stack'>[React, Redux, Ajax, JSX, Node.js] </p>
+                  </div>
+                  <div class='cert-container'>
+                    <img id='certificate' src=""></img>  
+                  </div>    
                 </div>
-                      
-            </div>
+              </div>
         </section>
+
+        <!-- Contact Section  -->
 
         <section id='contact-section' data-nav='Contact'>
           <div id ='contact-section-viewbox' class='section-in-viewport'></div>
           <h2 class='section-header'>Contact</h2>
-            <div class='section-container'></div>
+            <div id='contact-section-container' class='section-container'>
+              <p>Feel free to give me a call or drop a message!</p>
+              <div id='info'>
+                <p>Gage Cates</p>
+                <p>gagecates10@gmail.com</p>
+                <p>(307)-696-7124</p>
+              </div>
+              <div class='form-container'>
+                <form action="https://formspree.io/f/xpzovrop" method="POST">
+                  <input id='name' class='text-input' name='name' placeholder='Name' required><br>
+                  <input id='email' class='text-input' name='email' placeholder='Email' required><br>
+                  <textarea id='message' name='message' placeholder='Message' required></textarea><br>
+                  <input type='submit' id='submit' value='Send Message'>
+                </form>
+              </div>
+            </div>
         </section>
 
+        <!-- Footer  -->
+
         <div id='footer'>
-          <div class="flex-center">
-            <i class="fa fa-github fa-4x icon-3d"></i>
-            <i class="fa fa-twitter fa-4x icon-3d"></i>
-            <i class="fa fa-facebook fa-4x icon-3d"></i>
-            <i class="fa fa-instagram fa-4x icon-3d"></i>
+          <div class="flex-center-row">
+            <a href="https://github.com/gagecates"><i class="fa fa-github fa-4x icon-3d"></i></a>
+            <a href="https://twitter.com/gage_cates"><i class="fa fa-twitter fa-4x icon-3d"></i></a>
+            <a href="https://www.facebook.com/gage.cates"><i class="fa fa-facebook fa-4x icon-3d"></i></a>
+            <a href="https://www.instagram.com/gmancates10"><i class="fa fa-instagram fa-4x icon-3d"></i></a>
           </div>
         </div>
       

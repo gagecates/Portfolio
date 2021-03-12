@@ -5,8 +5,7 @@ html {
   }
 
 body {
-    background:rgb(2, 0, 0);
-    background:rgb(2, 0, 0);
+    background:blue;
     background: linear-gradient(180deg, #e4c98e 20%, #020100 65%);
     font-family: 'Raleway', sans-serif;
     color: $yellowLight;
@@ -15,28 +14,35 @@ body {
     
 }
 
+.flex-start{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.flex-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-center-row{
+    display: flex;
+    justify-content: center;
+}
+
 h1 {
     font-size: 7em;
     color: rgb(2, 0, 0);
     text-align: center;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px $yellowLight, 0 0 20px $yellowLight, 0 0 25px $yellowLight, 0 0 30px $yellowLight,0 0 35px $yellowLight;
-  }
-
-h2{
-    //font-size: 2.5em;
-  }
-
-h4{
-    //font-size: 1.6em;
-  }
-
-p{
-    //font-size: 1.2em;
 }
 
 #contact-jump{
     transition-property: opacity;
     text-shadow: 2px 2px $yellowLight;
+    font-size: 20px;
 }
 
 #contact-jump:hover{
@@ -49,7 +55,11 @@ p{
 }
 
 #bread-n-butter{
-    height: 40%
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
 }
 
 #intro-container{
@@ -84,53 +94,196 @@ p{
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px $yellowLight, 0 0 20px $yellowLight, 0 0 25px $yellowLight;
 }
 
-.project-image{
-    height: 15em;
-    width: 15em;
-}
-
 #shake-pic{
     width: 70%;
     height: 70%;
     border-radius: 20px;
-    margin-top: 3vh;
-}
+} 
 
  #shake-pic:hover{
     transform: scaleX(-1);
  }
 
-#projects-container{
+ #handshake{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     //border: 2px solid green;
+ }
+
+.program-container{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     width: 90%;
+    color: white;
+    margin-top: 2vh;
+    border-left: 1px solid $yellowLight;
+    border-top: 1px solid $yellowLight;
+    //border: 2px solid blue;
 }
 
-#programs-container{
-    display: flex; 
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    color: white;
-    border: 2px solid blue;
-    margin-right: auto;
+.program-details{
     text-align: left;
+    padding-left: 2vw;
+}
+
+#education-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #certificate{
-    margin-left: auto;
+    //margin-left: auto;
     height: 20vh;
     width: 20vw;
+    padding: 1vw;
 }
+
 .underline{
     text-decoration: underline;
 }
 
-#education-header{
+.date{
+    font-size: 10pt;
+}
+
+.udacity-header{
     border-bottom: 2px solid rgb(30, 144, 189);
     width: 20%;
     color: rgb(30, 144, 189);
+}
+
+.udemy-header{
+    border-bottom: 2px solid red;
+    width: 20%;
+    color: red;
+}
+
+.title{
+    margin: 4vh;
+    font-size: 15pt;
+}
+
+.form-container{
+    width: 50%;
+    border-radius: 20px;
+    background-color: black;
+    input{
+        width: 80%;
+        padding: 2vh;
+        margin: .5vh;
+        background-color: rgb(53, 50, 50);
+        border-radius: 10px;
+        border-color: $yellowLight;
+        color: white;
+    }
+    textarea {
+        resize: none;
+        height: 20vh;
+        width: 80%;
+        padding: 2vh;
+        margin: .5vh;
+        background-color: rgb(53, 50, 50);
+        border-radius: 10px;
+        border-color: $yellowLight;
+        color: white;
+      }
+}
+
+form input:focus, textarea:focus{
+    outline-style: none;
+}
+
+#submit{
+    background-color: $yellowLight;
+    width: 40%;
+    color: black;
+}
+
+#info{
+    padding: 2vh;
+    color: white;
+}
+
+.project-pic-container{
+    position:relative;
+    height: 15em;
+    width: 15em;
+}
+
+.project-pic-container:hover .overlay{
+    opacity: 1;
+}
+
+.project-image{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#all-projects-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.overlay {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 1s ease;
+    background-color: #008CBA;
+}
+
+.overlay-button{
+    padding: 5%;
+    font-size: 12pt;
+    border-radius: 5px;
+}
+
+.overlay-button:hover{
+    padding: 5%;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#project1 .overlay{
+    background-color: #008CBA;
+    p{
+        color: white;
+    }
+}
+
+#project2 .overlay{
+    background-color: rgb(209, 198, 209);
+    p{
+        color: red;
+    }
+}
+
+#project3 .overlay{
+    background-color: rgb(118, 179, 40);
+    p{
+        color: white;
+    }
+}
+
+#project4 .overlay{
+    background-color: rgb(226, 189, 86);
+    p{
+        color: rgb(250, 2, 2);
+    }
 }
