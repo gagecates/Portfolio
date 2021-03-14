@@ -11,6 +11,7 @@
   <title>Hello, I'm Gage Cates</title>
 </head>
 <body>
+
   <!-- Navbar  -->
   <div id='navbar'>
     <ul id='nav-items'>
@@ -24,7 +25,6 @@
       </section>
 
       <!-- About Section  -->
-
         <section id='about-section' data-nav='About'>
           <div id='about-section-viewbox' class='section-in-viewport'></div>
             <h2 id='about-header' class='section-header'>About</h2>
@@ -49,14 +49,21 @@
         </section>
 
         <!-- Work Section  -->
-
         <section id='work-section' data-nav='Work'>
           <div id ='work-section-viewbox' class='section-in-viewport'></div>
           <h2 id='work-header'class='section-header'>Work</h2>
           <div class='title'>Projects</div>
           <div id='all-projects-container' class='magic-appears slideshow'>
 
+            <!-- Projects-->
             <div class='project-pic-container' id='project1'>
+              <!-- Project modal popup-->
+              <div id="project1-modal" class="Modal is-hidden is-visuallyHidden">
+                <div class="Modal-content">
+                  <span id="project1-closeModal" class="Close">&times;</span>
+                </div>
+              </div>
+              <!--- Project container -->
               <img class='project-image' src="src/client/pics/where-to/project-photo.jpg"/>
               <div class='overlay'>
                 <div>
@@ -64,12 +71,18 @@
                   <p class='overlay-stack'>JS / Node.js</p>
                 </div>
                 <div>
-                  <button class='overlay-button'>Learn More</button>
+                  <button id='project1-btn' class='overlay-button modalBtn'>Learn More</button>
                 </div>
               </div>
             </div>
-
+          
             <div class='project-pic-container' id='project2'>
+              <!-- Project modal popup-->
+              <div id="project2-modal" class="Modal is-hidden is-visuallyHidden">
+                <div class="Modal-content">
+                  <span id="project2-closeModal" class="Close">&times;</span>
+                </div>
+              </div>
               <img class='project-image' src="src/client/pics/article-eval/project-photo.jpg"/>
               <div class='overlay'>
                 <div>
@@ -77,12 +90,19 @@
                   <p class='overlay-stack'>JS / Node.js</p>
                 </div>
                 <div>
-                  <button class='overlay-button'>Learn More</button>
+                  <button  id='project2-btn' class='overlay-button modalBtn'>Learn More</button>
                 </div>
               </div>
             </div>
 
             <div class='project-pic-container' id='project3'>
+              <!-- Project modal popup-->
+              <div id="project3-modal" class="Modal is-hidden is-visuallyHidden">
+                <div class="Modal-content">
+                  <span id="project3-closeModal" class="Close">&times;</span>
+                </div>
+              </div>
+              <!--- Project container -->
               <img class='project-image' src="src/client/pics/macros-yo/project-photo.jpg"/>
               <div class='overlay'>
                 <div>
@@ -90,12 +110,19 @@
                   <p class='overlay-stack'>Python / Flask</p>
                 </div>
                 <div>
-                  <button class='overlay-button'>Learn More</button>
+                  <button id='project3-btn' class='overlay-button modalBtn'>Learn More</button>
                 </div>
               </div>
             </div>
 
             <div class='project-pic-container' id='project4'>
+              <!-- Project modal popup-->
+              <div id="project4-modal" class="Modal is-hidden is-visuallyHidden">
+                <div class="Modal-content">
+                  <span id="project4-closeModal" class="Close">&times;</span>
+                </div>
+              </div>
+              <!--- Project container -->
               <img class='project-image' src="src/client/pics/trivia/project-photo.jpg"/>
               <div class='overlay'>
                 <div>
@@ -103,7 +130,7 @@
                   <p class='overlay-stack'>React / Python / Flask</p>
                 </div>
                 <div>
-                  <button class='overlay-button'>Learn More</button>
+                  <button id='project4-btn' class='overlay-button modalBtn'>Learn More</button>
                 </div>
               </div>
             </div>
@@ -111,7 +138,6 @@
         </section>
 
         <!-- Skills Section  -->
-
         <section id='skills-section' data-nav='Skills'>
           <div id ='skills-section-viewbox' class='section-in-viewport'></div>
           <h2 class='section-header'>Skills</h2>
@@ -136,9 +162,10 @@
                 </div>
             </div>
 
-              <!-- Programs  -->
+              <!-- Education  -->
               <div id='education-container' class='section-container'>
                 <div class='title'>Education / Cerification</div>
+
                   <div class='program-container'>
                     <div class='program-details'>
                       <h3 class='udacity-header'>Udacity</h3>
@@ -199,7 +226,6 @@
         </section>
 
         <!-- Contact Section  -->
-
         <section id='contact-section' data-nav='Contact'>
           <div id ='contact-section-viewbox' class='section-in-viewport'></div>
           <h2 class='section-header'>Contact</h2>
@@ -222,7 +248,6 @@
         </section>
 
         <!-- Footer  -->
-
         <div id='footer'>
           <div class="flex-center-row">
             <a href="https://github.com/gagecates"><i class="fa fa-github fa-4x icon-3d"></i></a>
