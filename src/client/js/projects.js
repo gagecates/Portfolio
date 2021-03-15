@@ -18,7 +18,7 @@ for (let btn of modalBtns){
         setTimeout(function() {
             body.className = "is-blurred";
             modal.className = "Modal";
-        }, 200);
+        }, 300);
     })
 }
 

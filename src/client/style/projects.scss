@@ -5,24 +5,22 @@
     top: 0;
     z-index: 9999;
     width: 100%;
-    height: 100%;
+    height: 90%;
     padding-top: 100px;
     background-color: black;
     background-color: rgba(0, 0, 0, 0.4);
-    -webkit-transition: 0.5s;
+    -webkit-transition: 5s;
     overflow: auto;
-    transition: all 0.3s linear;
-    border: 2px solid purple;
-    
+    transition: all 5s linear;
   }
   
 .Modal-content {
-background-color: #fefefe;
-margin: auto;
-padding: 20px;
-border-radius: 4px;
-max-width: 65vw;
-height: 75vh;
+    text-align: left;
+    background-color: #fefefe;
+    margin: auto;
+    border-radius: 4px;
+    max-width: 750px;
+    height: 770px;
 }
   
 .ModalOpen { 
@@ -37,11 +35,12 @@ height: 75vh;
     opacity: 0; 
 }
 
-
 .Close {
     color: #aaaaaa;
     float: right;
-    font-size: 16px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
   }
   
 .Close:hover, .Close:focus {
@@ -53,4 +52,150 @@ height: 75vh;
 .is-blurred {
     filter: blur(10px);
     -webkit-filter: blur(10px);
+}
+
+.project-pic-container{
+    position:relative;
+    height: 15em;
+    width: 15em;
+}
+
+.project-pic-container:hover .overlay{
+    opacity: 1;
+}
+
+.project-image{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#all-projects-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.overlay {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 1s ease;
+    background-color: #008CBA;
+}
+
+.overlay-button{
+    padding: 5%;
+    font-size: 12pt;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid white;
+}
+
+.overlay-button:hover{
+    padding: 5%;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#project1 .overlay{
+    background-color: #008CBA;
+    p{
+        color: white;
+    }
+}
+
+#project2 .overlay{
+    background-color: rgb(209, 198, 209);
+    p{
+        color: red;
+    }
+}
+
+#project3 .overlay{
+    background-color: rgb(118, 179, 40);
+    p{
+        color: white;
+    }
+}
+
+#project4 .overlay{
+    background-color: rgb(226, 189, 86);
+    p{
+        color: rgb(250, 2, 2);
+    }
+}
+
+.modal-heading{
+    font-size: 4vh;
+}
+
+.modal-picture-container{
+    height: 70%;
+}
+
+.modal-picture{
+    width: 100%;
+    height: 100%;
+}
+
+.modal-heading{
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+.modal-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 30%;
+    margin-left: 10px;
+    margin-right: 10px;
+    h4{
+        border-bottom: 2px solid black;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    p{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    font-size: 2vh;
+}
+
+.modal-links-container{
+    text-align: center;
+    a{
+        padding-right: 20px;
+        text-decoration: none;
+    }
+}
+
+.modal-link-btn{
+    border: 1px solid black;
+    display: inline;
+    font-size: 1.7vh;
+    padding: 8px;
+    width: 15vw;
+    margin-top: 0;
+    color: white;
+    text-decoration: none;
+    background-color: black;
+}
+
+.modal-link-btn:hover{
+    color: black;
+    background-color: white;
+    transition-duration: 1s;
 }
