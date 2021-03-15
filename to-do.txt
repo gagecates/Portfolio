@@ -1,7 +1,3 @@
-1. about section and maybe all, when scroll into view then gradually show content? from the dark...
 
-2. When projects come into viewport, then do slides to other pic one after another like a wave effect.. have two or the pics 
-
-
-
-
+1. When projects come into viewport, then do slides to other pic one after another like a wave effect.. have two or the pics 
+2. update modal pics with homepage pic once project is refined. 
