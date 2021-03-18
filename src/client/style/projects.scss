@@ -19,8 +19,8 @@
     background-color: #fefefe;
     margin: auto;
     border-radius: 4px;
-    max-width: 750px;
-    height: 770px;
+    max-width: 850px;
+    height: 850px;
 }
   
 .ModalOpen { 
@@ -56,8 +56,9 @@
 
 .project-pic-container{
     position:relative;
-    height: 15em;
-    width: 15em;
+    height: 250px;
+    width: 250px;
+    transition: 3s;
 }
 
 .project-pic-container:hover .overlay{
@@ -71,8 +72,10 @@
 }
 
 #all-projects-container{
+    position: absolute;
+    top: 100px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -137,7 +140,7 @@
 }
 
 .modal-heading{
-    font-size: 4vh;
+    font-size: 3vh;
 }
 
 .modal-picture-container{
@@ -167,11 +170,12 @@
         margin-top: 0;
     }
     p{
+        font-size: 12pt;
         margin-top: 0;
         margin-bottom: 0;
     }
 
-    font-size: 2vh;
+    font-size: 15pt;
 }
 
 .modal-links-container{
@@ -185,8 +189,8 @@
 .modal-link-btn{
     border: 1px solid black;
     display: inline;
-    font-size: 1.7vh;
-    padding: 8px;
+    font-size: 1.5vh;
+    padding: 7px;
     width: 15vw;
     margin-top: 0;
     color: white;
@@ -198,4 +202,12 @@
     color: black;
     background-color: white;
     transition-duration: 1s;
+}
+
+.slide-left{
+    margin-right: 250px;
+}
+
+.slide-right{
+    margin-left: 250px;
 }

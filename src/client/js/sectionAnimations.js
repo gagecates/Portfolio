@@ -45,4 +45,30 @@ function disableAnimations(section) {
     }
 }
 
-export { showHidden, sectionAnimations, disableAnimations }
+function projectSlide() {
+    const projectSection = document.getElementById('work-section-viewbox')
+    const projects = document.querySelectorAll('.project-pic-container')
+
+    if(inViewPort(projectSection)){
+        for(let project of projects){
+            if(project.classList.contains('left')) {
+                project.classList.add('slide-left')
+                //project.style.position = 'relative';
+                //project.style.right = '125px';
+                //project.style.transitionDuration = '5s';
+            }else{
+                project.classList.add('slide-right')
+                //project.style.position = 'relative';
+                //project.style.left = '125px';
+                //project.style.transitionDuration = '5s';
+            }
+        }
+    }else{
+        for(let project of projects){
+            project.classList.remove('slide-left')
+            project.classList.remove('slide-right')
+        }
+    }
+};
+
+export { showHidden, sectionAnimations, disableAnimations, projectSlide }

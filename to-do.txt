@@ -1,3 +1,18 @@
 
 1. When projects come into viewport, then do slides to other pic one after another like a wave effect.. have two or the pics 
 2. update modal pics with homepage pic once project is refined. 
+
+
+Need to push Travel App to Heroku. Start fresh, local and remote repo named travel app. Push. 
+
+
+
+static.json =
+
+{
+    "root": "starter/frontend/build/",
+    "clean_urls": false,
+    "routes": {
+      "/**": "index.html"
+    }
+  }

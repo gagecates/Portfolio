@@ -1,6 +1,6 @@
 //import { startUp } from './js/app'
 import { setActive, createNavLinks } from './js/navbar'
-import { showHidden, sectionAnimations, disableAnimations } from './js/sectionAnimations'
+import { showHidden, sectionAnimations, disableAnimations, projectSlide } from './js/sectionAnimations'
 import { skillAnimation } from './js/skills'
 import './js/projects'
 
@@ -14,6 +14,7 @@ import './style/projects.scss'
 document.addEventListener('scroll', function(){
     setActive();
     showHidden();
+    projectSlide();
 });
 
 createNavLinks();
