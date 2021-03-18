@@ -5,14 +5,3 @@
 
 Need to push Travel App to Heroku. Start fresh, local and remote repo named travel app. Push. 
 
-
-
-static.json =
-
-{
-    "root": "starter/frontend/build/",
-    "clean_urls": false,
-    "routes": {
-      "/**": "index.html"
-    }
-  }
