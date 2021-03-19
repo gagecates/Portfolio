@@ -4,54 +4,362 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="src/client/style/fontawesome-free-5.3.1-web/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
   
-  <title>Gage Cates</title>
+  <title>Hello, I'm Gage Cates</title>
 <link href="main.css" rel="stylesheet"></head>
 <body>
-  <section id='home-section'>
-    <div id='navbar-container'>
-      <ul id='nav-items'>
-        <li>Homes</li>
-        <li>About</li>
-        <li>Work</li>
-        <li>Contact</li>
-      </ul>
-      <h1>Gage Cates</h1>
-    </div>
-  </section>
 
-  <section id='about-section'>
-    <h2 class='section-header'>About</h2>
-    <h4>Me, Myself and I</h4>
-    <p class ='intro'>
-      Learning web development was definately my light bulb moment.
-      
-    </p>
-  </section>
-
-  <section id='work-section'>
-    <h2 class='section-header'>Work</h2>
-  </section>
-
-  <section id='contact-section'>
-    <h2 class='section-header'>Contact</h2>
-  </section>
-
-  <section id='footer'>
-    <p>Let's do the dang thing!</p>
-
-    <div class="flex-center">
-      <i class="fa fa-github fa-4x icon-3d"></i>
-      <i class="fa fa-twitter fa-4x icon-3d"></i>
-      <i class="fa fa-facebook fa-4x icon-3d"></i>
-      <i class="fa fa-instagram fa-4x icon-3d"></i>
-    </div>
-  </section>
-
-    
+  <!-- Navbar  -->
+  <div id='navbar'>
+    <ul id='nav-items'>
+      <!-- dynamically add links in navbar.js-->
+    </ul>
   </div>
+    <div id='main-container'>
+      <section id='home-section' data-nav='Home' class="this-section-active">
+        <div id ='home-section-viewbox' class='section-in-viewport'></div>
+          <h1>Gage Cates</h1>
+      </section>
+
+      <!-- About Section  -->
+        <section id='about-section' data-nav='About'>
+          <div id='about-section-viewbox' class='section-in-viewport'></div>
+            <h2 id='about-header' class='section-header'>About</h2>
+              <div class='section-container'>
+                <div class='magic-appear'>
+                  <div class='title'>Me, Myself and I</div>
+                    <p class ='intro'>
+                      Learning web development was definately my light bulb moment.<br>
+                      I am an extremely inspired full stack developer
+                      eager to test my potential.<br>
+                      Front end, back end, you name it. If I am coding, I am a happy camper.<br><br>
+                      Enough of the small talk...
+                    </p>
+                </div>
+                  <a href='#contact-section'>
+                    <div id= 'contact-jump' class='magic-appear' dest='contact'><h4>Let's create something great!</h4></div>
+                  </a>
+              </div>
+              <div id='handshake' class='section-container'>
+                  <img id='shake-pic' src="src/client/pics/sections/handshake.jpg"/>
+              </div>
+        </section>
+
+        <!-- Work Section  -->
+        <section id='work-section' data-nav='Work'>
+          <div id ='work-section-viewbox' class='section-in-viewport'></div>
+          <h2 id='work-header'class='section-header'>Work</h2>
+          <div id='all-projects-container' class='magic-appears'>
+            <div class='title'>Projects</div>
+
+            <!-- Projects -->
+
+            <!-- Project 1 -------------------------------------->
+            <div class='project-pic-container left' id='project4'>
+              <!-- Project 1 modal popup-->
+              <div id="project4-modal" class="Modal is-hidden is-visuallyHidden">
+                <div class="Modal-content">
+                  <div class='modal-picture-container'>
+                    <img class='modal-picture' src='src/client/pics/trivia/homepage.png' alt='project-image'/>
+                  </div>
+                  <div class='modal-description'>
+                    <div>
+                      <span id="project1-closeModal" class="Close">x</span>
+                      <div class='modal-heading'>Trivia</div>
+                      <h4>Test your skills Trivia</h4>
+                    </div>
+                    <p>
+                      Trivia is a fun and classic game to test your knowledge of a variety of categories. Python and SQLAlchemy bring this application together 
+                      on a FLask backend.
+                    </p>
+                    <div class='modal-links-container'>
+                      <a href='https://trivia-app-gmc.herokuapp.com/' target="_blank"><div class='modal-link-btn'>Deployed App</div></a>
+                      <a href='https://github.com/gagecates/Trivia_API' target="_blank"><div class='modal-link-btn'>Git Hub Repo</div></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--- Project 1 container and overlay -->
+              <img class='project-image' src="src/client/pics/trivia/project-photo.jpg"/>
+              <div class='overlay'>
+                <div>
+                  <h3>Trivia</h3>
+                  <p class='overlay-stack'>React / Python / Flask</p>
+                </div>
+                <div>
+                  <button id='project4-btn' class='overlay-button modalBtn'>Learn More</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2 -------------------------------------->
+            <div class='project-pic-container right' id='project3'>
+              <!-- Project 2 modal popup-->
+              <div id="project3-modal" class="Modal is-hidden is-visuallyHidden">
+                <div class="Modal-content">
+                  <div class='modal-picture-container'>
+                    <img class='modal-picture' src='src/client/pics/macros-yo/project-home.png' alt='project-image'/>
+                  </div>
+                  <div class='modal-description'>
+                    <div>
+                      <span id="project1-closeModal" class="Close">x</span>
+                      <div class='modal-heading'>Macros Yo</div>
+                      <h4>Personal Macro Tracker</h4>
+                    </div>
+                    <p>
+                      Macros Yo is a way for users to track their consumed macros. The database backed application allows users to enter and save 
+                      foods while providing the nutritional macro break down. Authentication is provided via Auth 0.
+                    </p>
+                    <div class='modal-links-container'>
+                      <a href='https://gage-heroku-app.herokuapp.com/' target="_blank"><div class='modal-link-btn'>Deployed App</div></a>
+                      <a href='https://github.com/gagecates/FSND_Capstone' target="_blank"><div class='modal-link-btn'>Git Hub Repo</div></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--- Project 2 container and overlay -->
+              <img class='project-image' src="src/client/pics/macros-yo/project-photo.jpg"/>
+              <div class='overlay'>
+                <div>
+                  <h3>Macros Yo</h3>
+                  <p class='overlay-stack'>Python / Flask</p>
+                </div>
+                <div>
+                  <button id='project3-btn' class='overlay-button modalBtn'>Learn More</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 3 -------------------------------------->
+            <div class='project-pic-container left' id='project1'>
+              <!-- Project 3 modal popup-->
+              <div id="project1-modal" class="Modal is-hidden is-visuallyHidden">
+                <div class="Modal-content">
+                  <div class='modal-picture-container'>
+                    <img class='modal-picture' src='src/client/pics/where-to/destination.png' alt='project-image'/>
+                  </div>
+                  <div class='modal-description'>
+                    <div>
+                      <span id="project1-closeModal" class="Close">x</span>
+                      <div class='modal-heading'>Where To?</div>
+                      <h4>Weather forecasting made easy</h4>
+                    </div>
+                    <p>
+                      Where To is a usefull resource for users to get a projected forecast for a desired location. The application utilizes multiple API's 
+                      in order to gather the destination coordinates and weather forecast according to the arrival date.
+                    </p>
+                    <div class='modal-links-container'>
+                      <a href='https://where-to-gmc.herokuapp.com/' target="_blank"><div class='modal-link-btn'>Deployed App</div></a>
+                      <a href='https://github.com/gagecates/Travel-App' target="_blank"><div class='modal-link-btn'>Git Hub Repo</div></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--- Project 3 container and overlay -->
+              <img class='project-image' src="src/client/pics/where-to/project-photo.jpg"/>
+              <div class='overlay'>
+                <div>
+                  <h3>Where To?</h3>
+                  <p class='overlay-stack'>JS / Node.js</p>
+                </div>
+                <div>
+                  <button id='project1-btn' class='overlay-button modalBtn'>Learn More</button>
+                </div>
+              </div>
+            </div>
+            
+            
+            <!-- Project 4 -------------------------------------->
+            <div class='project-pic-container right' id='project2'>
+              <!-- Project 4 modal popup-->
+              <div id="project2-modal" class="Modal is-hidden is-visuallyHidden">
+                <div class="Modal-content">
+                  <div class='modal-picture-container'>
+                    <img class='modal-picture' src='src/client/pics/article-eval/project-home.png' alt='project-image'/>
+                  </div>
+                  <div class='modal-description'>
+                    <div>
+                      <span id="project1-closeModal" class="Close">x</span>
+                      <div class='modal-heading'>Break it Down</div>
+                      <h4>Article evaluation</h4>
+                    </div>
+                    <p>
+                      Break it down take the URL of a news article and returns a break down of its content. The evaluation will provide things such as
+                      irony, agreement, subjectivity, and confidence.
+                    </p>
+                    <div class='modal-links-container'>
+                      <a href='https://break-it-down-gmc.herokuapp.com/' target="_blank"><div class='modal-link-btn'>Deployed App</div></a>
+                      <a href='https://github.com/gagecates/evaluate-news' target="_blank"><div class='modal-link-btn'>Git Hub Repo</div></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--- Project 4 container and overlay -->
+              <img class='project-image' src="src/client/pics/article-eval/project-photo.jpg"/>
+              <div class='overlay'>
+                <div>
+                  <h3>Break it Down</h3>
+                  <p class='overlay-stack'>JS / Node.js</p>
+                </div>
+                <div>
+                  <button  id='project2-btn' class='overlay-button modalBtn'>Learn More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills Section  -->
+        <section id='skills-section' data-nav='Skills'>
+          <div id ='skills-section-viewbox' class='section-in-viewport'></div>
+          <h2 class='section-header'>Skills</h2>
+            <div id='bread-n-butter' class='section-container'>
+              <div class='title'>My bread and butter</div>
+                <div id='skills-icons-container' class='magic-appear'>
+                  <img id='HTML' class='skills-icon' src="src/client/pics/skills/html.png"></img>
+                  <img id='CSS' class='skills-icon' src="src/client/pics/skills/css.png"></img>
+                  <img id='Sass' class='skills-icon' src="src/client/pics/skills/sass.png"></img>
+                  <img id='Bootstrap' class='skills-icon' src="src/client/pics/skills/bootstrap.png"></img>
+                  <img id='Javascript' class='skills-icon' src="src/client/pics/skills/javascript.png"></img>
+                  <img id='Node' class='skills-icon' src="src/client/pics/skills/node.png"></img>
+                  <img id='React' class='skills-icon' src="src/client/pics/skills/react.png"></img>
+                  <img id='Redux' class='skills-icon' src="src/client/pics/skills/redux.png"></img>
+                  <img id='Postgres' class='skills-icon' src="src/client/pics/skills/postgres.png"></img>
+                  <img id='Python' class='skills-icon' src="src/client/pics/skills/python.png"></img>
+                  <img id='Flask' class='skills-icon' src="src/client/pics/skills/flask.png"></img>
+                  <img id='Webpack' class='skills-icon' src="src/client/pics/skills/webpack.png"></img>
+                </div>
+                <div id='skill-explain-container'>
+                  <span id='skill-explain'></span>
+                </div>
+            </div>
+
+              <!-- Education  -->
+              <div id='education-container' class='section-container'>
+                <div class='title'>Education / Cerification</div>
+                  <!-- Program 1 -------------------------------------------->
+                  <div class='program-container'>
+                    <div id="certificate1-modal" class="Modal is-hidden is-visuallyHidden">
+                      <div class="Modal-content">
+                        <div>
+                          <img class='modal-picture' src='src/client/pics/certs/fullstack.png' alt='certificate-image'/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class='program-details'>
+                      <h3 class='udacity-header'>Udacity</h3>
+                      <h4 id='education-program'>Full Stack Nanodegree</h4>
+                      <div id='education-date' class='date'>October 2020 - January 2021</div>
+                      <p id='education-details'>Full stack web development program. Building fully functional database backed and deployed applications.</p>
+                        <ul>
+                          <li>Configure user authentication and access control for an application backend</li>
+                          <li>Design and build a database for an application</li>
+                          <li>Create and deploy a database-backed web API</li>
+                          <li>Deploy a Flask-based web application to the cloud using Docker and Kubernetes</li>
+                        </ul>
+                        <p id='stack'>[PostgreSQL, SQLAlchemy, Python, Flask, JWT, AWS, Auth0] </p>
+                    </div>
+                    <div class='cert-container'>
+                      <img class='certificate' src="src/client/pics/certs/fullstack.png"></img>
+                      <div class='overlay'>
+                        <div>
+                          <button  id='certificate1-btn' class='overlay-button modalBtn'>View</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- Program 2 -------------------------------------------->
+                <div class='program-container'>
+                  <div id="certificate2-modal" class="Modal is-hidden is-visuallyHidden">
+                    <div class="Modal-content">
+                      <div>
+                        <img class='modal-picture' src='src/client/pics/certs/frontend.png' alt='certificate-image'/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='program-details'>
+                    <h3 class='udacity-header'>Udacity</h3>
+                    <h4 id='education-program'>Front End Nanodegree</h4>
+                    <div id='education-date' class='date'>November 2020 - Feburary 2021</div>
+                    <p id='education-details'>Front end web development program. Learned the fundementals of front end applications. Webpack built responsive front end with a Node.js backend.</p>
+                      <ul>
+                        <li>Construct responsive websites using CSS, Flexbox and CSS Grid</li>
+                        <li>Develop interactive websites and UI applications using JavaScript and HTML</li>
+                        <li>Connect applications to backend server using JavaScript and Node.js</li>
+                        <li>Integrate application build and deployment using Webpack and Service Workers</li>
+                        <li>Application testing with Jest</li>
+                      </ul>
+                    <p id='stack'>[HTML, CSS, Sass, Javascript, Node.js, Webpack, Service Workers, Jest] </p>
+                  </div>
+                  <div class='cert-container'>
+                    <img class='certificate' src="src/client/pics/certs/frontend.png"></img>
+                    <div class='overlay'>
+                      <div>
+                        <button id='certificate2-btn' class='overlay-button modalBtn'>View</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Program 3 -------------------------------------------->
+                <div class='program-container'>
+                  <div class='program-details'>
+                    <h3 class='udemy-header'>Udemy</h3>
+                    <h4 id='education-program'>Modern React with Redux</h4>
+                    <div id='education-date' class='date'>January 2021 - March 2021</div>
+                    <p id='education-details'>Modern React/Redux program. Learned the ins and outs of building Redux applications. Fully functional React apps built.</p>
+                      <ul>
+                        <li>Learn the fundamental features of React, including JSX, state, and props</li>
+                        <li>Understanding the lifesycle methods</li>
+                        <li>React API requests using Ajax</li>
+                      </ul>
+                    <p id='stack'>[React, Redux, Ajax, JSX, Node.js] </p>
+                  </div>
+                  <div class='cert-container'>
+                    <img class='certificate' src=""></img>  
+                  </div>    
+                </div>
+              </div>
+        </section>
+
+        <!-- Contact Section  -->
+        <section id='contact-section' data-nav='Contact'>
+          <div id ='contact-section-viewbox' class='section-in-viewport'></div>
+          <h2 class='section-header'>Contact</h2>
+            <div id='contact-section-container' class='section-container'>
+              <p>Feel free to give me a call or drop a message!</p>
+              <div id='info'>
+                <p>Gage Cates</p>
+                <p>gagecates10@gmail.com</p>
+                <p>(307)-696-7124</p>
+              </div>
+              <div class='form-container'>
+                <form action="https://formspree.io/f/xpzovrop" method="POST">
+                  <input id='name' class='text-input' name='name' placeholder='Name' required><br>
+                  <input id='email' class='text-input' name='email' placeholder='Email' required><br>
+                  <textarea id='message' name='message' placeholder='Message' required></textarea><br>
+                  <input type='submit' id='submit' value='Send Message'>
+                </form>
+              </div>
+            </div>
+        </section>
+
+        <!-- Footer  -->
+        <div id='footer'>
+          <div class="flex-center-row">
+            <a href="https://github.com/gagecates"><i class="fa fa-github fa-4x icon-3d"></i></a>
+            <a href="https://twitter.com/gage_cates"><i class="fa fa-twitter fa-4x icon-3d"></i></a>
+            <a href="https://www.facebook.com/gage.cates"><i class="fa fa-facebook fa-4x icon-3d"></i></a>
+            <a href="https://www.instagram.com/gmancates10"><i class="fa fa-instagram fa-4x icon-3d"></i></a>
+          </div>
+        </div>
+      
+    </div>
 <script type="text/javascript" src="main.js"></script></body>
 
