@@ -101,7 +101,7 @@
               <div id="project3-modal" class="Modal is-hidden is-visuallyHidden">
                 <div class="Modal-content">
                   <div class='modal-picture-container'>
-                    <img class='modal-picture' src='src/client/pics/where-to/destination.png' alt='project-image'/>
+                    <img class='modal-picture' src='src/client/pics/macros-yo/project-home.png' alt='project-image'/>
                   </div>
                   <div class='modal-description'>
                     <div>
@@ -114,7 +114,7 @@
                       foods while providing the nutritional macro break down. Authentication is provided via Auth 0.
                     </p>
                     <div class='modal-links-container'>
-                      <a href='https://macros-yo.herokuapp.com/' target="_blank"><div class='modal-link-btn'>Deployed App</div></a>
+                      <a href='https://gage-heroku-app.herokuapp.com/' target="_blank"><div class='modal-link-btn'>Deployed App</div></a>
                       <a href='https://github.com/gagecates/FSND_Capstone' target="_blank"><div class='modal-link-btn'>Git Hub Repo</div></a>
                     </div>
                   </div>
@@ -180,7 +180,7 @@
               <div id="project2-modal" class="Modal is-hidden is-visuallyHidden">
                 <div class="Modal-content">
                   <div class='modal-picture-container'>
-                    <img class='modal-picture' src='src/client/pics/article-eval/project-photo.jpg' alt='project-image'/>
+                    <img class='modal-picture' src='src/client/pics/article-eval/project-home.png' alt='project-image'/>
                   </div>
                   <div class='modal-description'>
                     <div>
@@ -243,8 +243,15 @@
               <!-- Education  -->
               <div id='education-container' class='section-container'>
                 <div class='title'>Education / Cerification</div>
-
+                  <!-- Program 1 -------------------------------------------->
                   <div class='program-container'>
+                    <div id="certificate1-modal" class="Modal is-hidden is-visuallyHidden">
+                      <div class="Modal-content">
+                        <div>
+                          <img class='modal-picture' src='src/client/pics/certs/fullstack.png' alt='certificate-image'/>
+                        </div>
+                      </div>
+                    </div>
                     <div class='program-details'>
                       <h3 class='udacity-header'>Udacity</h3>
                       <h4 id='education-program'>Full Stack Nanodegree</h4>
@@ -259,11 +266,23 @@
                         <p id='stack'>[PostgreSQL, SQLAlchemy, Python, Flask, JWT, AWS, Auth0] </p>
                     </div>
                     <div class='cert-container'>
-                      <img id='certificate' src="src/client/pics/certs/fullstack.png"></img>
+                      <img class='certificate' src="src/client/pics/certs/fullstack.png"></img>
+                      <div class='overlay'>
+                        <div>
+                          <button  id='certificate1-btn' class='overlay-button modalBtn'>View</button>
+                        </div>
+                      </div>
                     </div>
                   </div>
-
+                <!-- Program 2 -------------------------------------------->
                 <div class='program-container'>
+                  <div id="certificate2-modal" class="Modal is-hidden is-visuallyHidden">
+                    <div class="Modal-content">
+                      <div>
+                        <img class='modal-picture' src='src/client/pics/certs/frontend.png' alt='certificate-image'/>
+                      </div>
+                    </div>
+                  </div>
                   <div class='program-details'>
                     <h3 class='udacity-header'>Udacity</h3>
                     <h4 id='education-program'>Front End Nanodegree</h4>
@@ -279,10 +298,16 @@
                     <p id='stack'>[HTML, CSS, Sass, Javascript, Node.js, Webpack, Service Workers, Jest] </p>
                   </div>
                   <div class='cert-container'>
-                    <img id='certificate' src="src/client/pics/certs/frontend.png"></img>
+                    <img class='certificate' src="src/client/pics/certs/frontend.png"></img>
+                    <div class='overlay'>
+                      <div>
+                        <button id='certificate2-btn' class='overlay-button modalBtn'>View</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
+                <!-- Program 3 -------------------------------------------->
                 <div class='program-container'>
                   <div class='program-details'>
                     <h3 class='udemy-header'>Udemy</h3>
@@ -297,7 +322,7 @@
                     <p id='stack'>[React, Redux, Ajax, JSX, Node.js] </p>
                   </div>
                   <div class='cert-container'>
-                    <img id='certificate' src=""></img>  
+                    <img class='certificate' src=""></img>  
                   </div>    
                 </div>
               </div>

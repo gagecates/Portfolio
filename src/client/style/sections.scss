@@ -2,16 +2,14 @@ $yellowLight: rgb(235, 196, 114);
 
 section{
     display: flex;
-    height: 100vh;
+    height: fit-content;
     position: relative;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    //border-top-width: 20vw;
-    padding-top: 3vh;
+    padding-top: 100px;
     scroll-behavior: smooth;
-    //border: 2px solid blue;
 }
 
 // box element centered in middle of sections used to determine section in view
@@ -40,6 +38,7 @@ section{
 }
 
 #home-section{
+    min-height: 100vh;
     background-image: url("../pics/lightbulb.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -50,10 +49,12 @@ section{
     position: relative;
     left: calc(-50vw + 50%);
     border-top: none;
+    height: 100vh;
     
 }
 
 #about-section{
+    min-height: 85vh;
     h2{
         width: 100%;
         border-top: .05em solid rgb(2, 0, 0);
@@ -63,10 +64,10 @@ section{
         
     }
     color:rgb(2, 0, 0);
-    height: 80vh;
 }
 
 #work-section{
+    min-height: 100vh;
     h2{
         width: 100%;
         border-top: .05em solid black;
@@ -79,6 +80,7 @@ section{
 }
 
 #skills-section{
+    min-height: 100vh;
     h2{
         width: 100%;
         overflow: suto;
@@ -91,10 +93,10 @@ section{
         padding-bottom: 1vh;
     }
     color:$yellowLight;
-    height: 200vh;
 }
 
 #contact-section{
+    min-height: 80vh;
     h2{
         width: 100%;
         border-top: .05em solid $yellowLight;
@@ -103,7 +105,6 @@ section{
         padding-right: 1vw;
     }
     color:$yellowLight;
-    height: 90vh;
 }
 
 #contact-section-container{
@@ -111,5 +112,5 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5vh;
+    margin-top: 50px;
 }

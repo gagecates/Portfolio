@@ -11,6 +11,7 @@ var closeBtns = document.querySelectorAll("span.Close");
 
 // Open the modal
 for (let btn of modalBtns){
+    console.log(btn)
     const project = btn.id
     const modal = document.getElementById(project.split("-")[0] + "-" + "modal");
 

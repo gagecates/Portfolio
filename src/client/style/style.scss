@@ -95,7 +95,7 @@ h1 {
 }
 
 #shake-pic{
-    width: 70%;
+    width: 50%;
     height: 70%;
     border-radius: 20px;
 } 
@@ -105,10 +105,10 @@ h1 {
  }
 
  #handshake{
+     margin-top: 100px;
      display: flex;
      justify-content: center;
      align-items: center;
-     //border: 2px solid green;
  }
 
 .program-container{
@@ -117,10 +117,14 @@ h1 {
     align-items: center;
     width: 90%;
     color: white;
-    margin-top: 2vh;
+    margin-top: 50px;
     border-left: 1px solid $yellowLight;
     border-top: 1px solid $yellowLight;
     //border: 2px solid blue;
+}
+
+.program-container .Modal-content{
+    height: 600px;
 }
 
 .program-details{
@@ -135,11 +139,25 @@ h1 {
     align-items: center;
 }
 
-#certificate{
-    //margin-left: auto;
-    height: 20vh;
-    width: 20vw;
-    padding: 1vw;
+.cert-container{
+    height: 250px;
+    width: auto;
+    //z-index: 100;
+    position: relative;
+}
+
+.cert-container:hover .overlay{
+    opacity: 1;
+}
+
+.cert-container .overlay{
+    margin: auto;
+    height: auto;
+}
+
+.certificate{
+    height: 100%;
+    width: auto;
 }
 
 .underline{
