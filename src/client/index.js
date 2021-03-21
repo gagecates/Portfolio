@@ -36,6 +36,13 @@ import './pics/where-to/destination.png'
 import './pics/where-to/project-photo.jpg'
 
 
+var ghpages = require('gh-pages');
+ 
+ghpages.publish('dist', function(err) {});
+
+ghpages.publish(dir, callback);
+
+
 // every scroll checks what section is in viewport
 document.addEventListener('scroll', function(){
     setActive();
