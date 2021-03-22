@@ -4,7 +4,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin")
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
-    entry: './src/client/index.js',
+    entry: './src/index.js',
     mode: 'development',
     devtool: 'source-map',
     stats: 'verbose',
@@ -24,9 +24,23 @@ module.exports = {
                 use: [ 'style-loader', 'css-loader', 'sass-loader' ]
             },
             {
-                test: /\.(jpg|png)$/,
-                use: {loader: 'url-loader'}
-            }
+                test: /\.(gif|png|jpe?g)$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                      name: '[name].[ext]',
+                      outputPath: 'assets/images/'
+                    }
+                  }
+                ]
+              },
+              {
+                test:/\.html$/,
+                use: [
+                  'html-loader'
+                ]
+              }
         ]
     },
     plugins: [
