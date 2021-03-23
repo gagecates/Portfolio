@@ -47,7 +47,7 @@ section{
     background-blend-mode: exclusion;
     width: 100vw;
     position: relative;
-    //left: calc(-50vw + 50%);
+    left: calc(-50vw + 50%);
     border-top: none;
     height: 100vh;
 }
@@ -66,7 +66,7 @@ section{
 }
 
 #work-section{
-    min-height: 100vh;
+    min-height: 120vh;
     h2{
         width: 100%;
         border-top: .05em solid black;
