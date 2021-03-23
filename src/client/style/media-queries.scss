@@ -1,0 +1,113 @@
+
+$yellowLight: rgb(235, 196, 114);
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+#nav-items{
+    font-size: 2vh;
+}
+
+h1 {
+    font-size: 5em;
+    margin: 0;
+    padding: 0;
+}
+
+#home-section{
+    height: 60vh;
+}
+
+#about-section{
+    padding-top: 0;
+}
+
+#work-section{
+    min-height: 130vh;
+    h2{
+        margin-bottom: 5vh;
+    }
+}
+
+#work-section .title{
+    margin: 0;
+}
+
+#skills-section .section-in-viewport{
+    position: absolute;
+    height: 10vh;
+    width: 10vw;
+    left: 40%;
+    top: 10%;
+}
+
+#shake-pic{
+    width: 90%;
+    height: 70%;
+    border-radius: 20px;
+}
+
+
+.slide-left{
+    margin-right: 0px;
+}
+
+.slide-right{
+    margin-left: 0px;
+}
+
+.program-container{
+    flex-direction: column;
+    border-left: none;
+}
+
+.form-container{
+    width: 70%;
+}
+
+#submit{
+    width: 60%;
+}
+
+
+#contact-section h2{
+    padding-right: 10vw;
+}
+
+#skills-section h2{
+    padding-left: 0;
+}
+
+.Modal-content {
+    max-width: 350px;
+    height: 400px;
+}
+
+
+
+.modal-description{
+    p{
+        font-size: 8pt;
+        margin-bottom: 30px;
+    }
+
+    font-size: 11pt;
+    .modal-heading{
+        margin-top: 15px;
+    }
+}
+
+.modal-picture-container{
+    height: 60%;
+}
+
+.modal-link-btn{
+    font-size: 1vh;
+    padding: 2px;
+    width: 10vw;
+    margin-top: 0;
+}
+
+.Close{
+    margin-top: 15px;
+}
+
+}

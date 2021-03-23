@@ -47,10 +47,9 @@ section{
     background-blend-mode: exclusion;
     width: 100vw;
     position: relative;
-    left: calc(-50vw + 50%);
+    //left: calc(-50vw + 50%);
     border-top: none;
     height: 100vh;
-    
 }
 
 #about-section{
@@ -83,7 +82,7 @@ section{
     min-height: 100vh;
     h2{
         width: 100%;
-        overflow: suto;
+        overflow: auto;
         border-top: .05em solid $yellowLight;
         margin-right: auto;
         text-align: left;

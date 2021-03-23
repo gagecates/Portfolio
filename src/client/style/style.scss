@@ -2,6 +2,10 @@ $yellowLight: rgb(235, 196, 114);
 
 html {
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; 
   }
 
 body {
@@ -11,6 +15,8 @@ body {
     color: $yellowLight;
     margin: 0;
     padding: 0;
+    width: 100%;
+    overflow-x: hidden; 
 }
 
 .flex-start{
@@ -217,6 +223,7 @@ form input:focus, textarea:focus{
 
 #submit{
     background-color: $yellowLight;
+    margin-bottom: 20px;
     width: 40%;
     color: black;
     cursor: pointer;

@@ -10,6 +10,7 @@ import './client/style/social.scss'
 import './client/style/skills.scss'
 import './client/style/sections.scss'
 import './client/style/projects.scss'
+import './client/style/media-queries.scss'
 
 // every scroll checks what section is in viewport
 document.addEventListener('scroll', function(){
