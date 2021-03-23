@@ -1,1 +1,3 @@
-Beginning to build my portfolio as a developer. 
+# Welcome to my Portfolio!
+
+Check it out on [GitHub Pages](https://gagecates.github.io/Portfolio/).
