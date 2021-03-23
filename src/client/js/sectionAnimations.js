@@ -26,7 +26,7 @@ function sectionAnimations(section) {
     // home section doesnt have an h2. this avoids errors
     if(section.querySelector("h2")){
         const sectionHeader = section.querySelector("h2")
-        sectionHeader.style.width = "20%";
+        sectionHeader.style.width = "25%";
         sectionHeader.style.transitionDuration = "3s";
     }else{
         return
